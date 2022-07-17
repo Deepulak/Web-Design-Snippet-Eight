@@ -1,0 +1,178 @@
+/* created by 8bit-code*/
+
+
+*{
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: cursive;
+
+}
+
+body{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    background: rgb(35, 35, 36);
+
+}
+
+.container{
+
+    display: flex;
+
+    width: 1250px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    padding: 40px 0 ;
+
+}
+
+.container .card{
+
+    position: relative;
+
+  width: 320px;
+
+  height: 460px;
+
+ border-radius: 15px;
+
+ margin:30px;
+
+}
+
+.container .card .box{
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    background: #383f44;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.5s;
+
+}
+
+.container .card:hover .box
+
+{
+
+    transform: translateY(-20px);
+
+}
+
+.container .card .box .content
+
+{
+
+   padding: 20px;
+
+   text-align: center;
+
+}
+
+.container .card .box .content img{
+
+    position: relative;
+
+    top: -34px;
+
+}
+
+ 
+
+.container .card .box .content h3
+
+{
+
+font-size: 1.8em;
+
+color:  #46b8ec;
+
+z-index:  1;transition: 0.5s;
+
+}
+
+.container .card:hover .box .content h3,
+
+.container .card:hover .box .content p{
+
+    color: #46b8ec;
+
+}
+
+.container .card .box .content p{
+
+    font-size: 1em;
+
+    font-weight: 300;
+
+    color: #46b8ec;
+
+    z-index: 1;
+
+    
+
+}
+
+.container .card .box .content a{
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    background: #46b8ec;
+
+    border-radius: 20px;
+
+    top: 15px;
+
+    color: aliceblue;
+
+    text-decoration: none;
+
+    box-shadow: 0 10px 20px rgba(10, 10, 10, 0.3);transition: 0.5s;
+
+}
+
+.container .card:hover .box .content a
+
+{
+
+    background: #46b8ec;
+
+}
+
+ 

@@ -1,0 +1,20 @@
+div {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: relative;
+	animation-name: example;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	/* other values for fill-mode are backwards. both and none */
+}
+
+@keyframes example {
+	from {
+		top: 0;
+	}
+	to {
+		top: 200px;
+		background-color: blue;
+	}
+}

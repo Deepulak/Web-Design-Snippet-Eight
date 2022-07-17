@@ -1,0 +1,31 @@
+/* animation-delay
+configures the delay between the time the 
+element is loaded and the beginning of the
+animation sequence
+
+   animation-iteration-count
+configures the number of times the animation
+should repeat; you can specify infinite to repeat
+the animation indefinitely
+*/
+
+div {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	animation-name: example;
+	animation-duration: 4s;
+	animation-delay: -2s;
+	animation-iteration-count: 3;
+	/* use value infinite to make
+	animation continue for ever */
+} 
+
+@keyframes example {
+	0% { background-color: red; left: 0px; top: 0px; }
+	25% { background-color: yellow; left: 200px; top: 0px; }
+	50% { background-color: blue; left: 200px; top: 200px; }
+	75% { background-color: green; left: 0px; top: 200px; }
+	100% { background-color: red; left: 0px; top: 0px; }
+}

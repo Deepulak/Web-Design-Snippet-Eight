@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+body {
+  background-color: #302e38;
+  color: #f7f7f7;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  padding: 0;
+  margin: 0 auto 10rem;
+  text-align: center;
+  max-width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  font-weight: 700;
+}
+
+.container {
+  height: 15rem;
+  flex: 1 0 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container--pink {
+  background-color: #fa5094;
+}
+
+.container--blue {
+  background-color: #1c3aa4;
+}
+
+.container--aqua {
+  background-color: #00b9d2;
+}
+
+.container--purple {
+  background-color: #8854a0;
+}
+
+.menu {
+  width: 4rem;
+  height: 3.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0.5rem;
+  text-indent: 5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.menu__inner,
+.menu__inner:before,
+.menu__inner:after {
+  position: absolute;
+  height: 0.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+.menu__inner {
+  width: 70%;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu__inner:before,
+.menu__inner:after {
+  content: "";
+  left: 0;
+  width: 100%;
+}
+
+.menu__inner:before {
+  top: -0.75rem;
+}
+
+.menu__inner:after {
+  top: 0.75rem;
+}
+
+/* Slide */
+.menu--slide .menu__inner,
+.menu--slide .menu__inner:before,
+.menu--slide .menu__inner:after {
+  transition: transform, left, top, 0.16s ease-in-out;
+}
+
+.menu--slide.menu--active .menu__inner {
+  transform: translateX(-4rem);
+}
+
+.menu--slide.menu--active .menu__inner:before {
+  transform: translateX(2rem) rotate(135deg);
+  left: 2rem;
+  top: 0;
+}
+
+.menu--slide.menu--active .menu__inner:after {
+  transform: translateX(2rem) rotate(-135deg);
+  left: 2rem;
+  top: 0;
+}
+
+/* Squeeze */
+
+.menu--squeeze .menu__inner,
+.menu--squeeze .menu__inner:before,
+.menu--squeeze .menu__inner:after {
+  transition: top 0.2s 0.2s, transform 0.2s, background-color 0.4s 0.2s;
+}
+
+.menu--squeeze.menu--active .menu__inner {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.menu--squeeze.menu--active .menu__inner:before {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s, transform 0.2s 0.14s;
+}
+
+.menu--squeeze.menu--active .menu__inner:after {
+  transform: rotate(45deg);
+  top: 0;
+  transition: top 0.2s, transform 0.2s 0.14s;
+}
+
+/* Spin */
+
+.menu--spin .menu__inner,
+.menu--spin .menu__inner:before,
+.menu--spin .menu__inner:after {
+  transition: transform, top, opacity,
+    cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s;
+}
+
+.menu--spin.menu--active .menu__inner {
+  transition-delay: 0.1s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(225deg);
+}
+
+.menu--spin.menu--active .menu__inner:before {
+  top: 0;
+  opacity: 0;
+  transition: top, opacity, 0.1s ease-out;
+}
+
+.menu--spin.menu--active .menu__inner:after {
+  top: 0;
+  transition: top 0.1s ease-out,
+    transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
+  transform: rotate(-90deg);
+}
+
+/* Arrow */
+
+.menu--arrow .menu__inner,
+.menu--arrow .menu__inner:before,
+.menu--arrow .menu__inner:after {
+  transition: top, left, transform, width, 0.2s ease-in-out;
+}
+
+.menu--arrow.menu--active .menu__inner:before {
+  top: 0.45rem;
+  transform: rotate(45deg);
+  left: -0.4em;
+  width: 50%;
+}
+
+.menu--arrow.menu--active .menu__inner:after {
+  top: -0.45rem;
+  transform: rotate(-45deg);
+  left: -0.4em;
+  width: 50%;
+}

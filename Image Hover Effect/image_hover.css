@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght700&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  color: #141318;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 700;
+}
+
+.container {
+  padding: 0;
+  margin: 2rem auto 20rem;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.image-effect {
+  margin: 2rem 0;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-effect > img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-effect--bw {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+
+.image-effect--bw:hover {
+  filter: grayscale(0%);
+}
+
+.image-effect--zoom > img {
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-effect--zoom:hover > img {
+  transform: scale(1.4);
+}
+
+.image-effect--tilt > img {
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-effect--tilt:hover > img {
+  transform: rotate(-8deg) scale(1.2);
+}
+
+.image-effect--frame {
+  background-color: #141318;
+}
+
+.image-effect--frame > img {
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+.image-effect--frame:hover > img {
+  transform: scale(0.8);
+}
+
+.image-effect--fill:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fa5094;
+  mix-blend-mode: overlay;
+  transition: width 0.3s ease-in-out;
+}
+
+.image-effect--fill:hover:after {
+  width: 100%;
+}

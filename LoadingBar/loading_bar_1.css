@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+body {
+  background-color: #302e38;
+  color: #f7f7f7;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  padding: 0;
+  margin: 0 auto 10rem;
+  text-align: center;
+  max-width: 40rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0 1rem;
+  font-weight: 700;
+}
+
+.container {
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-bar {
+  display: inline-block;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-bar:before {
+  content: "";
+  position: absolute;
+}
+
+.loading-bar--striped {
+  border: 2px solid #fa5094;
+  background-image: linear-gradient(
+    -45deg,
+    #ff78aa 25%,
+    #fa5094 25%,
+    #fa5094 50%,
+    #ff78aa 50%,
+    #ff78aa 75%,
+    #fa5094 75%,
+    #fa5094
+  );
+  background-position: 0 0;
+  background-size: 4rem 4rem;
+  animation: striped 3s linear infinite;
+}
+
+@keyframes striped {
+  100% {
+    background-position: 4rem 4rem;
+  }
+}
+
+.loading-bar--fill {
+  border: 2px solid #25d9e6;
+}
+
+.loading-bar--fill:before {
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 0;
+  border-radius: 0.25rem;
+  background-color: #25d9e6;
+  animation: fill 3s ease-in-out infinite;
+}
+
+@keyframes fill {
+  50% {
+    width: calc(100% - 8px);
+  }
+}
+
+.loading-bar--swing {
+  border: 2px solid #b564db;
+}
+
+.loading-bar--swing:before {
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 20%;
+  border-radius: 0.25rem;
+  background-color: #b564db;
+  animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+  50% {
+    left: calc(80% - 4px);
+  }
+}
+
+.loading-bar--lines {
+  border: 2px solid #7abd33;
+  background-image: linear-gradient(
+    90deg,
+    #7abd33 0%,
+    #7abd33 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-position: 0 center;
+  background-repeat: repeat-x;
+  background-size: 1rem 75%;
+  animation: lines 1s linear infinite;
+}
+
+@keyframes lines {
+  100% {
+    background-position: 2rem center;
+  }
+}
+
+.loading-bar--float {
+  border: 2px solid #5094e3;
+}
+
+.loading-bar--float:before {
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 20%;
+  border-radius: 0.25rem;
+  background-color: #5094e3;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% {
+    top: calc(80% - 4px);
+  }
+}

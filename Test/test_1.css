@@ -1,0 +1,35 @@
+/* animation-name
+specifies the name of the @keyframes at-rule
+describing the aniamtion's keyframes
+
+   animation-duration
+configures the length of time that an 
+animation should take to complete one cycle
+*/
+
+div {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+@keyframes example {
+	from { background-color: red; }
+	to { background-color: yellow; }
+}
+
+/* The keyframes specify CSS styles inside the @keyframes rule,
+the animation will gradually change from the current style to the new
+style to the new style at certail times.
+To get an animation to work, you must bind the animation
+to an element */
+@keyframes infinite-spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

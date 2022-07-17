@@ -1,0 +1,23 @@
+/* animation-direction
+configures whether or not the animation should
+alternate direction on each run through the
+sequence or reset to the start point and
+repeat itself
+
+	animation-timing-funtion
+configures the timing of the animation; that is, how
+the animation trasitions through keyframes, by
+establishing acceleration curves
+*/
+
+#div1 { animation-timing-function: linear; animation-direction: normal; }
+#div2 { animation-timing-function: ease; animation-direction: reverse; }
+#div3 { animation-timing-function: ease-in; animation-direction: alternate; }
+#div4 { animation-timing-function: ease-out; animation-direction: alternate-revesre; }
+#div5 { animation-timing-function: ease-in-out; animation-direction: normal; }
+
+
+@keyframes mymove {
+	from { left: 0px; }
+	to { left: 300px; }
+}

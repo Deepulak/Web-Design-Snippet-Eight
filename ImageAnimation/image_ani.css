@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+body {
+   
+}
+
+.title {
+  
+  font-size: 2.6rem;
+  font-family: 'Lobster', cursive;
+}
+
+.wrapper {
+  /*background: url("https://i.pinimg.com/originals/ab/8e/e0/ab8ee02e8d29a62e96ddcc4e31069649.jpg");*/
+  background: url("https://thefappening.pro/wp-content/uploads/2020/02/Ana-de-Armas-Sexy-TheFappening.Pro-1.jpg");
+  color: #eee;
+  width: 100%;
+  height:800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
